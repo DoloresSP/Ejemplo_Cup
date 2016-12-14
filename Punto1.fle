@@ -1,0 +1,54 @@
+import java.util.*;
+import java.io.*;
+
+%%
+
+%class Punto1
+%standalone
+%16bit
+%{
+public boolean enc,enc2;
+String cadena="";
+ FileWriter fichero = null;
+PrintWriter pw = null;
+
+
+public void volcarEnFichero(String yytext){
+        try
+        {
+  		fichero = new FileWriter("Tabla.html");
+        	pw = new PrintWriter(fichero);
+        	pw.println(yytext);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+          	 try {
+           // Nuevamente aprovechamos el finally para 
+           // asegurarnos que se cierra el fichero.
+           if (null != fichero)
+              fichero.close();
+           } catch (Exception e2) {
+              e2.printStackTrace();
+           }
+        }
+}
+%}
+
+%init{
+	enc=false;
+%init}
+
+%eof{
+	
+	volcarEnFichero(cadena);
+%eof}
+
+
+%%
+
+"ctl00_Contenido_tblAcciones" + {enc=true;cadena="<div> <table class=\"TblPort\" cellspacing=\"0\" cellpadding=\"3\" border=\"0\" id=\""+yytext()+"\"";}
+
+"</table>\n</div>"+ {enc=false;cadena=cadena+yytext();}
+
+.   {if (enc==true)cadena=cadena+yytext();}

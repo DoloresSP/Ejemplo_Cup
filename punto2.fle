@@ -1,0 +1,89 @@
+/*---*/
+import java_cup.runtime.Symbol;
+
+%%
+
+%cup
+%unicode
+%state Tabla,Fila,Cabecera,Campo,Nombre,Ult,Dif,Max,Min,Vol,Efec,Fecha,Hora 
+%%
+
+<YYINITIAL>{
+	"<div>" {yybegin(Tabla);return new Symbol(sym.INICIO_FICHERO);}
+	"</div>" {return new Symbol(sym.FIN_FICHERO);}
+}
+
+<Tabla>{
+	"<table"~">" {yybegin(Fila);return new Symbol(sym.INICIO_TABLA);}
+}
+
+<Fila>{
+	"<tr"~">" {return new Symbol(sym.INICIO_FILA);}
+	"<th"~">"  {yybegin(Cabecera);return new Symbol(sym.INICIO_CABECERA);}
+	"<td"~">" {yybegin(Nombre);return new Symbol(sym.INICIO_CAMPO);}
+	"</tr>" {return new Symbol(sym.FIN_FILA);}
+	"</table>" {yybegin(YYINITIAL);return new Symbol(sym.FIN_TABLA);}
+}
+
+<Cabecera>{
+	"</th>" {yybegin(Fila); return new Symbol(sym.FIN_CABECERA);}	
+}
+
+
+<Nombre>{
+	[A-Z]+?(\.|" ")+?[A-Z]+?(\.|" ")+?[A-Z]+?(\.|" ")+?[A-Z]+?(\.|" ")+?[A-Z]+ {return new Symbol(sym.NOMBRE, new String(yytext()));}
+	"<a"~">" {}
+	"</a>" {}
+	"</td>" {yybegin(Ult); return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Ult>{
+	[0-9]+?(\.)?+?","[0-9]+ {return new Symbol(sym.ULTIMO, new String(yytext()));}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Dif);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Dif>{
+	"-"?+[0-9]+?","[0-9]+ {return new Symbol(sym.DIF, new String(yytext()));}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Max);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Max>{
+	[0-9]+?(\.)?[0-9]+?","[0-9]+ {return new Symbol(sym.MAX);}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Min);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Min>{
+	[0-9]+?(\.)?[0-9]+?","[0-9]+ {return new Symbol(sym.MIN);}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Vol);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Vol>{
+	[0-9]+?(\.)?[0-9]+?(\.)[0-9]+ {return new Symbol(sym.VOL);}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Efec);return new Symbol(sym.FIN_CAMPO);}
+	
+}
+
+<Efec>{
+	[0-9]+?(\.)?[0-9]+?","[0-9]+ {return new Symbol(sym.EFEC);}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Fecha);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Fecha>{
+	[0-9]+"\/"[0-9]+"\/"[0-9]+ {return new Symbol(sym.FECHA);}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Hora);return new Symbol(sym.FIN_CAMPO);}
+}
+
+<Hora>{
+	[0-9]+":"+[0-9]+ {}
+	"<td"~">" {return new Symbol(sym.INICIO_CAMPO);}
+	"</td>" {yybegin(Fila);return new Symbol(sym.FIN_CAMPO);}
+}
+
+[^] {}

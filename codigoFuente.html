@@ -1,0 +1,350 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=9" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta id="ctl00_copyright" name="copyright" content="Copyright © Bolsas y Mercados Españoles 2016" /><link href="/estilos.css" rel="stylesheet" type="text/css" /><title>
+	Bolsa de Madrid - Precios de la sesión
+</title><script type="text/javascript">
+var id = "esp", bolsa = "BMadrid"; window.id = "esp"; window.AnalyticsID = "UA-35966870-2"; window.horaAct = "Mon, 02 May 2016 09:00:46 GMT";</script><link id="ctl00_RSSLink1" rel="alternate" type="application/rss+xml" href="/esp/aspx/RSS/RSS.ashx?feed=Todo" title="Bolsa de Madrid: Todos los contenidos agregados" /><link id="ctl00_RSSLink2" rel="alternate" type="application/rss+xml" href="/esp/aspx/RSS/RSS.ashx?feed=NotasPrensa" title="Bolsa de Madrid: Notas de Prensa" /><link id="ctl00_RSSLink3" rel="alternate" type="application/rss+xml" href="/esp/aspx/RSS/RSS.ashx?feed=Regulacion" title="Bolsa de Madrid: Regulación: Circulares e Instrucciones Operativas" /><link id="ctl00_RSSLink4" rel="alternate" type="application/rss+xml" href="/esp/aspx/RSS/RSS.ashx?feed=Indices" title="Bolsa de Madrid: Avisos Índices IBEX" /><link id="ctl00_RSSLink5" rel="alternate" type="application/rss+xml" href="/esp/aspx/RSS/RSS.ashx?feed=Revista" title="Bolsa de Madrid: Artículos de la Revista Bolsa" />
+    <script type="text/javascript" src="/js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/js/Master.js"></script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <div id="Base">
+        <table cellpadding="0" cellspacing="0" align="center">
+            <tr class="noimpr">
+                <td colspan="6" id="CabeceraArr">
+                    <div id="Idiomas">
+                        <ul><li class="mclick"><a href="/?id=ing" target="_self">&nbsp;English&nbsp;</a></li></ul></div>
+                    <div id="MenuSup">
+                        <ul><li class="mclick"><a href="http://www.bolsasymercados.es/esp/inf_legal/inf_legal_marcos.htm" target="_blank">&nbsp;Accionistas e Inversores BME&nbsp;</a></li><li class="mclick"><a href="/esp/BMadrid/Contacto.aspx" target="_self">&nbsp;Contacto&nbsp;</a></li><li class="mclick"><a href="/esp/Inversores/Agenda/HorarioMercado.aspx" target="_self">&nbsp;Horario Mercado&nbsp;</a></li><li class="mclick"><a href="/esp/aspx/Inversores/Agenda/Calendario.aspx" target="_self">&nbsp;Calendario bursátil&nbsp;</a></li><li class="mclick"><a href="/esp/RSS.aspx" target="_self">&nbsp;RSS&nbsp; &nbsp;<img src="/images/IconoRSS.png" border="0" align="absmiddle" alt="RSS" />&nbsp;</a></li></ul></div>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td rowspan="3" class="BaseIzq noimpr">
+                    <div>
+                    </div>
+                </td>
+                <td rowspan="3" class="BaseSep noimpr">
+                </td>
+                <td class="BaseMenu" id="CabeceraLogo">
+                    <a href="/?id=esp">
+                        <img src="/images/Base/LogoBMadrid.gif" border="0" alt="Bolsa de Madrid" /></a>
+                </td>
+                <td id="Cabecera" class="noimpr">
+                    <div id="LogoBME">
+                        <a href="http://www.bolsasymercados.es/" target="_blank">
+                            <img src="/images/Base/LogoBMEBlanco.png" width="118" height="45" border="0" alt="Bolsas y Mercados Españoles" /></a></div>
+                    <div class="finFila">
+                    </div>
+                    <div id="TopMensajes">
+                        <table cellpadding="0" cellspacing="0" width="650" height="27" align="left">
+                            <tr>
+                                <td style="margin: 0 0 0 40px; vertical-align: middle;">
+                                    <div>
+                                        <a></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="BuscadorCab">
+                        <div>Buscador de<br/>empresas</div>
+                        <form id="formBusq" method="get" action="/esp/aspx/Empresas/BusqEmpresas.aspx">
+                        <input type="text" name="busq" value="nombre / ISIN / ticker" autocomplete="off" />
+                        <div id="divBusq" style="display: none;"></div>
+                        <span class="BtnGris mclick"><a href="javascript:document.forms.formBusq.submitbusq();"><span class="BtnBuscarDcha" title="Buscar"></span></a></span>
+                        </form>
+                    </div>
+                    <div id="LineaBuscadorCab">
+                    </div>
+                </td>
+                <td rowspan="3" class="BaseSep noimpr">
+                </td>
+                <td rowspan="3" class="BaseDcha noimpr">
+                    <div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="SeparacionCap">
+                    <div class="noimpr">
+                    </div>
+                    
+<div class="seg"><a href="/?id=esp" target="_self">Inicio</a> / <a href="#" target="_self">MERCADOS Y COTIZACIONES</a> / <a href="/esp/aspx/Mercados/Precios.aspx?indice=ESI100000000" target="_self">Acciones</a> / <span class="segUlt">Precios de la sesión &gt;</span></div>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td class="BaseMenu noimpr">
+                    
+<script type="text/javascript" src="/js/MenuIzq.js"></script>
+<div id="MenuIzq" class="MenuIzq noimpr">
+
+</div>
+<script language="javascript">
+var MenuIzqLoad_MenusSel = [ "m211","m212","m213" ];
+var MenuIzqLoad_MenusDespl = [  ];
+MenuIzqLoad(true,'General');
+</script>
+
+                </td>
+                <td class="BaseCont">
+                    
+                    
+<script type="text/javascript" language="javascript">
+    var f, sel;
+    $(function() {
+        f = document.forms.aspnetForm;
+        sel = [ f.ctl00_Contenido_SelMercado, f.ctl00_Contenido_SelÍndice, f.ctl00_Contenido_SelSector ];
+    });
+    var rstSel = function (n) {
+        if (sel[n].selectedIndex > 0) {
+            for (var i=0; i<3; ++i)
+                if (n!=i) sel[i].selectedIndex = 0;
+        };
+    };
+    var chkSel = function () {
+        for (var i=0; i<3; ++i)
+            if (sel[i].selectedIndex > 0) return true;
+        return false;
+    }
+</script>
+<div class="col6"><form name="aspnetForm" method="post" action="/esp/aspx/Mercados/Precios.aspx?indice=ESI100000000" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="GLJlH+x6R7nk6csj+4Lb1flVB6xgHwuZ34PBjZ3AvoAfXnc4ny/eGJOzh/oPEshUgfa+x5C2nKEvY4MokE7sQWh9HTNFvJv7kAAZwjvnWIg/8GNAADu9bohpiBSGUO8vilD4UXDYZJ8624lOg5R95L/TsxL3mH4q6azZ+8YI+PEg2SoPcNLWFpYFY7EE/UKnHfwbOiClFl9jrVRhfiwSsbaXf5MUYkspoNRrUmWCmPg/RWpf7daLiMKhp3Tq8iX8JDIYHA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DC05C2DC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="y6DUh73UkEfNQmt+vehgT1hie8lR1oMyHpmPL54AiJv2ZSX3dhfcWiOTJVmzE/ScF/Y+TyMia3/IN00jvu7kqjg1Q2aTc/G4XR40P4L6emTPA6K8PO4p05i0Jq8d7Ldt1dXMuI8Qbu+OevuNqEcfs6mAic9zGAscBxlv5/3fWzLCHs1cdtO1LGg3nB4VZcaekb0bEqcvaZ5iowddXOtN3m55znkHaRuKyAqBF4IeeRnUOGlPJ0Mk40+dgnsep030dBU4AVSZDZSFkJEJjkL/2dGvdg5cTMooeqZWKncWIqaG/NPXPytSWdrYOaDKBZUSNW0Zbiye2NwcEw0XJfq/tEiYtEE=" />
+</div>
+<div class="TituloPag">Precios de la sesión</div>
+<table cellpadding="5" cellspacing="2" class="FrmBusq" style="width: 60%;" align="center"><tr>
+  <td class="Etiqueta">Mercado</td><td class="Campo"> <select name="ctl00$Contenido$SelMercado" id="ctl00_Contenido_SelMercado" onchange="rstSel(0);">
+	<option selected="selected" value="" style="color: #999999;">Seleccione mercado</option>
+	<option value="MC">Mercado Continuo</option>
+	<option value="ETF">ETFs</option>
+	<option value="LT">Latibex</option>
+	<option value="MABEE">MAB - EE</option>
+	<option value="2MER">2&#186; Mercado</option>
+	<option value="CMAD">Corros Madrid</option>
+	<option value="CBAR">Corros Barcelona</option>
+	<option value="CBIL">Corros Bilbao</option>
+	<option value="CVAL">Corros Valencia</option>
+
+</select> </td>
+  <td class="Etiqueta">Índice</td><td class="Campo"> <select name="ctl00$Contenido$SelÍndice" id="ctl00_Contenido_SelÍndice" onchange="rstSel(1);">
+	<option value="" style="color: #999999;">Seleccione &#237;ndice</option>
+	<option selected="selected" value="ESI100000000">IBEX 35&#174;</option>
+	<option value="ESI060000000">IBEX MEDIUM CAP&#174;</option>
+	<option value="ESI240000000">IBEX SMALL CAP&#174;</option>
+	<option value="ESI260000000">IBEX TOP Dividendo&#174;</option>
+	<option value="ES0S00000901">IBEX 35&#174; Bancos</option>
+	<option value="ES0S00000919">IBEX 35&#174; Energ&#237;a</option>
+	<option value="ES0S00000927">IBEX 35&#174; Construcci&#243;n</option>
+	<option value="ESI230000000">FTSE4Good IBEX</option>
+	<option value="ESI200000000">FTSE Latibex All Share</option>
+	<option value="ESI220000000">FTSE Latibex TOP</option>
+	<option value="ESI250000000">FTSE Latibex BRASIL</option>
+
+</select> </td>
+  <td class="Etiqueta">Sector</td><td class="Campo"> <select name="ctl00$Contenido$SelSector" id="ctl00_Contenido_SelSector" onchange="rstSel(2);">
+	<option value="" style="color: #999999;">Seleccione sector</option>
+	<option value="01">Petr&#243;leo y Energ&#237;a</option>
+	<option value="02">Mat.Basicos, Industria y Construcci&#243;n</option>
+	<option value="03">Bienes de Consumo</option>
+	<option value="04">Servicios de Consumo</option>
+	<option value="05">Servicios Financieros e Inmobiliarios</option>
+	<option value="06">Tecnolog&#237;a y Telecomunicaciones</option>
+
+</select> </td>
+  <td  class="Buscar">
+    <input type="submit" name="ctl00$Contenido$Consultar" value="Consultar" onclick="return chkSel();" id="ctl00_Contenido_Consultar" style="width:90px;" />
+  </td>
+ </tr></table>
+<br /><br />
+
+<div class="LinkAntSig">
+
+<div class="Ctr">IBEX 35®</div>
+<div class="finFila"></div>
+</div>
+
+<div>
+	<table class="TblPort" cellspacing="0" cellpadding="3" align="Center" border="0" id="ctl00_Contenido_tblÍndice" style="width:80%;border-collapse:collapse;margin-bottom: 20px;">
+		<tr align="center">
+			<th scope="col">Nombre</th><th scope="col">Anterior</th><th scope="col">&#218;ltimo</th><th scope="col">% Dif.</th><th scope="col">M&#225;ximo</th><th scope="col">M&#237;nimo</th><th scope="col">Fecha</th><th scope="col">Hora</th><th class="Ult" scope="col">% Dif.<br/>Año 2016</th>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left">IBEX 35&#174;</td><td>9.269,00</td><td>9.025,70</td><td class="DifClBj">-2,62</td><td>9.195,90</td><td>9.025,70</td><td align="center">29/04/2016</td><td align="center">17:38</td><td class="DifClBj">-5,43</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<table class="TblPort" cellspacing="0" cellpadding="3" border="0" id="ctl00_Contenido_tblAcciones" style="width:100%;border-collapse:collapse;">
+		<tr align="center">
+			<th scope="col">Nombre</th><th scope="col">&#218;lt.</th><th scope="col">% Dif.</th><th scope="col">M&#225;x.</th><th scope="col">M&#237;n.</th><th scope="col">Volumen</th><th scope="col">Efectivo (miles €)</th><th scope="col">Fecha</th><th class="Ult" scope="col">Hora</th>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0111845014">ABERTIS</a></td><td>14,7250</td><td class="DifClBj">-0,41</td><td>14,8500</td><td>14,6450</td><td>2.772.275</td><td>40.846,26</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0125220311">ACCIONA</a></td><td>69,9400</td><td class="DifClBj">-0,36</td><td>70,2100</td><td>69,2500</td><td>242.247</td><td>16.923,19</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0132105018">ACERINOX</a></td><td>10,3150</td><td class="DifClBj">-0,48</td><td>10,4700</td><td>10,2350</td><td>2.770.107</td><td>28.645,21</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0167050915">ACS</a></td><td>28,8750</td><td class="DifClBj">-1,84</td><td>29,2750</td><td>28,8650</td><td>1.368.546</td><td>39.748,50</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0105046009">AENA</a></td><td>124,5500</td><td class="DifClBj">-0,56</td><td>125,4000</td><td>124,1000</td><td>868.823</td><td>108.231,63</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0109067019">AMADEUS</a></td><td>39,7400</td><td class="DifClBj">-0,10</td><td>39,9000</td><td>39,1850</td><td>1.773.806</td><td>70.364,40</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=LU0323134006">ARCELORMIT.</a></td><td>4,9470</td><td class="DifClBj">-3,08</td><td>5,1560</td><td>4,9000</td><td>4.967.213</td><td>25.039,31</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113790226">BA.POPULAR</a></td><td>2,3750</td><td class="DifClBj">-4,77</td><td>2,5450</td><td>2,3700</td><td>19.045.576</td><td>46.006,97</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113860A34">BA.SABADELL</a></td><td>1,6690</td><td class="DifClBj">-2,23</td><td>1,7130</td><td>1,6630</td><td>25.162.589</td><td>42.281,52</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113900J37">BA.SANTANDER</a></td><td>4,4210</td><td class="DifClBj">-4,45</td><td>4,5990</td><td>4,4210</td><td>310.959.767</td><td>1.401.187,21</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113307021">BANKIA</a></td><td>0,8130</td><td class="DifClBj">-3,56</td><td>0,8550</td><td>0,8090</td><td>36.315.502</td><td>29.965,78</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113679I37">BANKINTER</a></td><td>6,6560</td><td class="DifClBj">-1,44</td><td>6,7580</td><td>6,6410</td><td>3.844.204</td><td>25.704,47</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0113211835">BBVA</a></td><td>5,9830</td><td class="DifClBj">-4,77</td><td>6,2190</td><td>5,9430</td><td>63.202.962</td><td>381.803,86</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0140609019">CAIXABANK</a></td><td>2,6290</td><td class="DifClBj">-3,56</td><td>2,7390</td><td>2,6250</td><td>14.199.253</td><td>37.777,64</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0126775032">DIA</a></td><td>4,8460</td><td class="DifClBj">-2,14</td><td>4,9310</td><td>4,8250</td><td>3.317.952</td><td>16.102,19</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0130960018">ENAGAS</a></td><td>26,6050</td><td class="DifClSb">0,13</td><td>26,6250</td><td>26,3050</td><td>1.034.817</td><td>27.458,24</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0130670112">ENDESA</a></td><td>18,3350</td><td class="DifClSb">0,19</td><td>18,3850</td><td>18,1400</td><td>1.815.479</td><td>33.212,65</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0122060314">FCC</a></td><td>7,5820</td><td class="DifClBj">-0,32</td><td>7,6090</td><td>7,5800</td><td>4.917.902</td><td>37.338,17</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0118900010">FERROVIAL</a></td><td>18,7900</td><td class="DifClBj">-2,11</td><td>18,9750</td><td>18,6500</td><td>9.591.164</td><td>181.153,67</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0143416115">GAMESA</a></td><td>17,1950</td><td class="DifClSb">2,32</td><td>17,2300</td><td>16,6250</td><td>3.183.793</td><td>54.233,27</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0116870314">GAS NATURAL</a></td><td>18,1650</td><td class="DifClBj">-2,08</td><td>18,5700</td><td>18,1650</td><td>2.315.732</td><td>42.305,26</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0171996087">GRIFOLS CL.A</a></td><td>18,9950</td><td class="DifClBj">-2,21</td><td>19,3200</td><td>18,9950</td><td>1.109.857</td><td>21.166,67</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0177542018">IAG</a></td><td>6,7150</td><td class="DifClBj">-5,30</td><td>6,9000</td><td>6,6320</td><td>9.883.590</td><td>66.762,15</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0144580Y14">IBERDROLA</a></td><td>6,2040</td><td class="DifClBj">-1,18</td><td>6,2390</td><td>6,1780</td><td>24.838.982</td><td>154.034,72</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0148396007">INDITEX</a></td><td>28,0350</td><td class="DifClBj">-2,13</td><td>28,4400</td><td>27,8800</td><td>5.959.280</td><td>167.862,32</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0118594417">INDRA A</a></td><td>10,2300</td><td class="DifClBj">-2,57</td><td>10,4750</td><td>10,1300</td><td>676.619</td><td>6.925,59</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0124244E34">MAPFRE</a></td><td>2,2150</td><td class="DifClBj">-2,81</td><td>2,2860</td><td>2,2110</td><td>8.475.194</td><td>18.889,73</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0152503035">MEDIASET</a></td><td>11,3400</td><td class="DifClSb">0,22</td><td>11,4150</td><td>11,2100</td><td>3.546.704</td><td>40.021,61</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0105025003">MERLIN</a></td><td>10,1500</td><td class="DifClSb">0,30</td><td>10,1750</td><td>10,0100</td><td>4.155.340</td><td>41.882,30</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0142090317">OHL</a></td><td>6,1810</td><td class="DifClSb">0,60</td><td>6,3500</td><td>6,0400</td><td>2.964.279</td><td>18.391,42</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlSb" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0173093115">R.E.C.</a></td><td>77,9700</td><td class="DifClSb">0,50</td><td>78,0900</td><td>77,0000</td><td>1.171.041</td><td>90.593,85</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0173516115">REPSOL</a></td><td>11,4450</td><td class="DifClBj">-2,68</td><td>11,7250</td><td>11,4450</td><td>8.210.951</td><td>94.901,87</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0182870214">SACYR</a></td><td>1,8590</td><td class="DifClBj">-1,80</td><td>1,9190</td><td>1,8510</td><td>6.568.712</td><td>12.394,34</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0178165017">TEC.REUNIDAS</a></td><td>29,3300</td><td class="DifClBj">-0,46</td><td>29,6950</td><td>29,0400</td><td>615.452</td><td>18.080,26</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr><tr align="right">
+			<td class="DifFlBj" align="left"><a href="/esp/aspx/Empresas/FichaValor.aspx?ISIN=ES0178430E18">TELEFONICA</a></td><td>9,5220</td><td class="DifClBj">-4,25</td><td>9,8970</td><td>9,5110</td><td>27.479.996</td><td>264.471,72</td><td align="center">29/04/2016</td><td class="Ult" align="center">Cierre</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+<div class="Nota"><u>Precios</u> expresados en euros.<br />
+<u>Efectivo</u> expresado en miles de euros.<br />
+El <u>volumen y efectivo</u> para cada valor incluye todas las operaciones realizadas hasta el cierre de la sesión de contratación. El <u>volumen y efectivo total</u> incluyendo las operaciones especiales realizadas después del cierre de la sesión está disponible en la consulta histórica.<br />
+</div>
+
+</form></div>
+
+                    <div class="finFila">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="BaseIzq noimpr">
+                </td>
+                <td class=" BaseSep noimpr">
+                </td>
+                <td colspan="2">
+                    <div id="capaIconosRRSS" class="noimpr">
+                        Síguenos en:                        
+                        <br />
+                        <ul><li class="mclick"><a href="https://twitter.com/GrupoBME" target="_blank">&nbsp;<img src="/images/Twitter.png" border="0" align="absmiddle" alt="Twitter" />&nbsp;</a></li><li class="mclick"><a href="http://www.slideshare.net/grupobme/" target="_blank">&nbsp;<img src="/images/Slideshare.png" border="0" align="absmiddle" alt="Slideshare" />&nbsp;</a></li><li class="mclick"><a href="http://www.flickr.com/photos/archivobme/" target="_blank">&nbsp;<img src="/images/Flickr.png" border="0" align="absmiddle" alt="Flickr" />&nbsp;</a></li><li class="mclick"><a href="http://www.linkedin.com/company/grupo-bme" target="_blank">&nbsp;<img src="/images/Linkedin.png" border="0" align="absmiddle" alt="Linkedin" />&nbsp;</a></li><li class="mclick"><a href="http://www.youtube.com/user/GrupoBME?ob=0&feature=results_main" target="_blank">&nbsp;<img src="/images/Youtube.png" border="0" align="absmiddle" alt="YouTube" />&nbsp;</a></li></ul>
+                    </div>
+                </td>
+                <td class="BaseSep noimpr">
+                </td>
+                <td class="BaseDcha noimpr">
+
+                </td>
+            </tr>
+            <tr valign="top">
+                <td class="PieIzq noimpr">
+                </td>
+                <td class="PieFondo BaseSep noimpr">
+                </td>
+                <td colspan="2" class="PieFondo">
+                    <div>
+                        <div id="PieOps" class="noimpr">
+                            <ul><li class="mclick"><a href="/esp/aspx/Comun/MapaWeb.aspx" target="_self">&nbsp;Mapa web&nbsp;</a></li><li class="mclick"><a href="javascript:Disclaimer('esp')" target="_self">&nbsp;Disclaimer&nbsp;</a></li><li class="mclick"><a href="/esp/BMadrid/AvisoLegal.aspx" target="_self">&nbsp;Aviso Legal&nbsp;</a></li><li class="mclick"><a href="/esp/PoliticaCookies.aspx" target="_self">&nbsp;Políticas de Cookies&nbsp;</a></li><li class="mclick"><a href="http://www.bolsasymercados.es/docs/proveedores/Promedio_pago_a_proveedores.pdf" target="_blank">&nbsp;Pago Proveedores&nbsp;</a></li></ul></div>
+                        <div id="PieWebs" class="noimpr">
+                            <form id="formWeb">
+                            <select name="ctl00$webs" id="ctl00_webs">
+	<option value="">Webs del grupo BME</option>
+	<option value="http://www.bolsasymercados.es">BOLSAS Y MERCADOS ESPA&#209;OLES</option>
+	<option value="http://www.bmerv.es">BME RENTA VARIABLE</option>
+	<option value="http://www.bolsamadrid.es">BOLSA DE MADRID</option>
+	<option value="http://www.borsabcn.es">BOLSA DE BARCELONA</option>
+	<option value="http://www.bolsabilbao.es">BOLSA DE BILBAO</option>
+	<option value="http://www.bolsavalencia.es">BOLSA DE VALENCIA</option>
+	<option value="http://www.aiaf.es/">BME RENTA FIJA</option>
+	<option value="http://www.bmemarketdata.es/">BME MARKET DATA</option>
+	<option value="http://www.bmeinnova.com">BME INNOVA</option>
+	<option value="http://www.bmeclima.es">BME CLIMA</option>
+	<option value="http://www.bmeclearing.es/">BME CLEARING</option>
+	<option value="http://www.iberclear.es/">IBERCLEAR</option>
+	<option value="http://www.infobolsa.es">INFOBOLSA</option>
+	<option value="http://www.institutobme.es">INSTITUTO BME</option>
+	<option value="http://www.latibex.com">LATIBEX</option>
+	<option value="http://www.bolsasymercados.es/mab">MAB</option>
+	<option value="http://www.meff.com/">MEFF</option>
+	<option value="http://www.regis-tr.com/">REGIS-TR</option>
+	<option value="http://www.visual-trader.com">VISUAL TRADER</option>
+</select>
+                            <div class="BtnGris mclick" style="display: inline; margin-left: 10px;">
+                                <div class="BtnFlechaBlancaDcha" style="display: inline;">
+                                    <a href="javascript:var o=document.forms.formWeb.ctl00_webs.value;if(o && o.length>0) window.open(o,'_blank');void(0);">
+                                        &nbsp;IR</a></div>
+                            </div>
+                            </form>
+                        </div>
+                        <div id="PieCopyright">
+                            Copyright © Bolsas y Mercados Españoles
+                            2016</div>
+                    </div>
+                </td>
+                <td class="PieFondo BaseSep noimpr">
+                </td>
+                <td class="PieDcha noimpr">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
